@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link rel="stylesheet" href="animate.min.css"> -->
+
+
+	<title>SARS | the rapper</title>
+</head>
+<body ng-app="TrackListApp">
+	<div id="main">
+
+	<div id="header">
+		<h1>SARS</h1>
+		<h4>the rapper</h4>		
+	</div>
+
+	<div id="container" ng-controller="MainController">
+		<div class="tracks row" ng-repeat="track in tracks">
+	      <div class="box-left"></div>
+	      
+	      <div class="box-play">
+	      	<img src="images/play.png"/>
+	      </div>
+	      
+	      <div class="box-play-black"></div>
+
+	      <div class="box-black-track">
+	        <p class="name">{{track.name}}</h3>
+	      </div>
+
+	      <div class="box-black-length">
+	        <p class="description">{{track.length}}</p>
+	      </div>
+
+	      <div class="box-download-black"></div>
+
+	      <div class="box-download">
+	      	<img src="images/download.png">
+	      </div>
+
+	      <div class="box-right"></div>
+	    </div>
+	</div> <!-- end container -->
+
+
+	<div id="footer">
+		<div class="foot-left"></div>
+
+		<div class="learn-more">
+			<p class="learn-text">learn more</p>
+		</div>
+
+		<div class="foot-middle"></div>
+
+		<div class="donate">
+			<p class="donate-text">donate</p>
+		</div>
+
+		<div class="foot-right"></div>
+	</div>
+	
+	</div> <!-- end main -->
+
+	<!-- Scripts and such -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="MainController.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
